@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Airline" Class="AirlineDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JOEL-PC\SQLEXPRESS;Initial Catalog=Airline;Integrated Security=True" SettingsObjectName="AirLine.Properties.Settings" SettingsPropertyName="AirlineConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.users" Member="User">
+    <Type Name="User">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aircrafts" Member="Aircraft">
+    <Type Name="Aircraft">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="model" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="seat_number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Aircraft_flights" Member="flights" ThisKey="id" OtherKey="aircraft_id" Type="flights" />
+    </Type>
+  </Table>
+  <Table Name="dbo.routes" Member="routes">
+    <Type Name="routes">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="flight_duration" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="departure_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="destination_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="routes_flights" Member="flights" ThisKey="id" OtherKey="route_id" Type="flights" />
+      <Association Name="airports_routes" Member="airports" ThisKey="departure_id" OtherKey="id" Type="airports" IsForeignKey="true" />
+      <Association Name="airports_routes1" Member="airports1" ThisKey="destination_id" OtherKey="id" Type="airports" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.airports" Member="airports">
+    <Type Name="airports">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="alias" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="airports_routes" Member="routes" ThisKey="id" OtherKey="departure_id" Type="routes" />
+      <Association Name="airports_routes1" Member="routes1" ThisKey="id" OtherKey="destination_id" Type="routes" />
+    </Type>
+  </Table>
+  <Table Name="dbo.flights" Member="flights">
+    <Type Name="flights">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="create_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="departure" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="arrival" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="prices" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="surcharge" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="route_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="aircraft_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="regular_seats" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="frist_class_seats" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_regular_seats" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_frist_class_seats" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Aircraft_flights" Member="Aircraft" ThisKey="aircraft_id" OtherKey="id" Type="Aircraft" IsForeignKey="true" />
+      <Association Name="routes_flights" Member="routes" ThisKey="route_id" OtherKey="id" Type="routes" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

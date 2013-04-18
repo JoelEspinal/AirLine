@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AirlineDataContext">
+  <DataContextMoniker Name="/AirlineDataContextDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7b90c5aa-ea90-47ae-a931-393bf34da2e0" absoluteBounds="0.5, 2.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/AirlineDataContextDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b281e62-4bf5-41b6-b676-818b24c530b1" absoluteBounds="0.515, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="646a8d0b-9337-4611-b3ee-62fcd1248271" absoluteBounds="5.125, 2.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AirlineDataContextDataContext/Aircraft" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6b3f383-0e6d-4e6c-9419-291d0866562b" absoluteBounds="5.14, 2.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="53a2961a-5639-4160-9551-51489944035c" absoluteBounds="4.625, 5.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AirlineDataContextDataContext/routes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4aac7341-10c2-4eaa-b5d3-8b1d8fbefeb5" absoluteBounds="4.64, 5.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="722c7650-07a0-4ce1-8fa2-eadb4eeb2b2d" absoluteBounds="0.5, 5.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/AirlineDataContextDataContext/airports" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32389d8e-e14a-42e4-95b9-345bfe658013" absoluteBounds="0.51500000000000012, 6.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 6.31814697265625); (4.625 : 6.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirlineDataContextDataContext/airports/airports_routes" />
+      <nodes>
+        <classShapeMoniker Id="722c7650-07a0-4ce1-8fa2-eadb4eeb2b2d" />
+        <classShapeMoniker Id="53a2961a-5639-4160-9551-51489944035c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 5.90907348632813); (4.625 : 5.90907348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirlineDataContextDataContext/airports/airports_routes1" />
+      <nodes>
+        <classShapeMoniker Id="722c7650-07a0-4ce1-8fa2-eadb4eeb2b2d" />
+        <classShapeMoniker Id="53a2961a-5639-4160-9551-51489944035c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6228c3c9-aa7b-4cbd-8bda-2ceaa35ebdfe" absoluteBounds="2.625, 1.875, 2, 3.1170068359375">
+      <DataClassMoniker Name="/AirlineDataContextDataContext/flights" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08901266-dd06-4d5c-8b49-7b51ada2a5d4" absoluteBounds="2.64, 2.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 2.91429768880208); (4.625 : 2.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirlineDataContextDataContext/Aircraft/Aircraft_flights" />
+      <nodes>
+        <classShapeMoniker Id="646a8d0b-9337-4611-b3ee-62fcd1248271" />
+        <classShapeMoniker Id="6228c3c9-aa7b-4cbd-8bda-2ceaa35ebdfe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 5.5); (5.625 : 5.3670068359375); (3.625 : 5.3670068359375); (3.625 : 4.9920068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirlineDataContextDataContext/routes/routes_flights" />
+      <nodes>
+        <classShapeMoniker Id="53a2961a-5639-4160-9551-51489944035c" />
+        <classShapeMoniker Id="6228c3c9-aa7b-4cbd-8bda-2ceaa35ebdfe" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
