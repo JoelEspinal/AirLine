@@ -124,7 +124,7 @@
   <data name="AddNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAABESURBVDhPY2DAAr59+/YfG8amFqsYSLOTkxMKBokNVwNw
+        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAABESURBVDhPY2DAAr59+/YfG8amFqsYSLOTkxMKBokNVwNw
         BRi2MMAasNgCDF0zLj44YIeJAdgCh+hAxJWUR1JKpDQ7AwCTVZKs1/tHmAAAAABJRU5ErkJggg==
 </value>
   </data>
@@ -137,7 +137,7 @@
   <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAFMSURBVDhPpVMtj4NAEOUn3E/oT+hPuOBJanEVeKpRVdgG
+        YQUAAAAJcEhZcwAADr0AAA69AUf7kK0AAAFMSURBVDhPpVMtj4NAEOUn3E/oT+hPuOBJanEVeKpRVdgG
         T1KJPIEHjSIh+MNBQJzD7s0bdlo+dpNLbpMJ7Xy8eTvz1nHozPP8QfYkU2Q/ZDf494f8d52DPNiFc1BQ
         VZXyPI+tbdt3cImfyOosy5TruqooCsTvrwb0p0zTlIOwIAjUOI5gAmY3/I7jmGPII9/Xhp0wEAB8kyTh
         63Rdx4DwAQRMALwHQKc6z/MXC+mGK+1YnUzzkUEeQFAMkGma0P3TWCxOPSymur4OmGFLfyk2MvB9X4Zq
@@ -149,7 +149,7 @@
   <data name="MoveFirst.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAADDSURBVDhPtZPBDcMgDEUzSmdhEuZgAO7M0JybEXLmxCi0
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAADDSURBVDhPtZPBDcMgDEUzSmdhEuZgAO7M0JybEXLmxCi0
         F66UH5kIO2lLEjWSFcD+TzbYwyC+lJIuNhfLwnCmZfy6L85bseC9z8aYrJRihjP4EINYBiJxtNZuhBLk
         nAMkMgiocMjgT3uChCUL1IXUZPD0mPIzvhbDWvqpHA3ALGv+JQYMGmgBYPQecc0GWgZoxTX9vf//ACC3
         WYz38evL1BIuX+K1Z6ReCD1dWC+PNRIBMAexpxt3W7mBnBumdrKOjvMbg5BSbBhy2aUAAAAASUVORK5C
@@ -159,7 +159,7 @@
   <data name="MovePrevious.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAABzSURBVDhPY/j//z8DJZgizSCLqWMAAxr49u3bfCD+jwPP
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAABzSURBVDhPY/j//z8DJZgizSCLqWMAAxr49u3bfCD+jwPP
         hymHuwBZP0xzW1vbfycnJzAGsaGGwTWD9GAYQIpmDAMIaMbqHbgLsGmGOR8XDfIS9QwA+QebKyZOnIgr
         JsDipAZiP3p0Uz8aYTaQnJCGdmYCAAd9ippJd9cpAAAAAElFTkSuQmCC
 </value>
@@ -167,7 +167,7 @@
   <data name="MoveNext.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAABqSURBVDhPY/j//z8DJZgizSCLqWMAAxR8+/ZtPhD/x4Hn
+        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAABqSURBVDhPY/j//z8DJZgizSCLqWMAAxR8+/ZtPhD/x4Hn
         w9TBaLgLkCVghrS1tf13cnICYxAbaiiKIVgNABlGrCFwA/A4G2w7LpegGABTRIhG9g51DcDlDaK8gB49
         JAci1aKR7IQ0tDMTABdaiok1unVHAAAAAElFTkSuQmCC
 </value>
@@ -175,7 +175,7 @@
   <data name="MoveLast.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAC6SURBVDhPrZPBDcMgDEUzSmdhEuZgAO4skoyQMydGoblw
+        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAAC6SURBVDhPrZPBDcMgDEUzSmdhEuZgAO4skoyQMydGoblw
         pfzIqbBLEEmKZBGw/5NN7GkSK6Wki63FsjDcaRn/PRfnq1jw3mdjTFZKMcMdfIhBLAOROFprf4QS5JwD
         JDIIqHDI4LMzQcKeBepCajJ4mZf8jttu+JZ+KkcDsLZqhqAHgQZaALqp9yDQMsCRcm+vy/k/oPXqIyU8
         fsRnv5F6IYx04VEiayQCYA7iSDc2W7mC3BumerKujvMHs2pSjUxuVZIAAAAASUVORK5CYII=
@@ -202,20 +202,8 @@
   <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="flightsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>319, 17</value>
-  </metadata>
-  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="routesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>790, 17</value>
-  </metadata>
-  <metadata name="routesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>790, 17</value>
-  </metadata>
-  <metadata name="routeDataContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>641, 17</value>
   </metadata>
   <metadata name="routeDataContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>641, 17</value>
@@ -223,17 +211,8 @@
   <metadata name="aircraftsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>333, 56</value>
   </metadata>
-  <metadata name="aircraftsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>333, 56</value>
-  </metadata>
   <metadata name="aircraftDataContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>176, 56</value>
-  </metadata>
-  <metadata name="aircraftDataContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>176, 56</value>
-  </metadata>
-  <metadata name="fligthDataContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>171, 17</value>
   </metadata>
   <metadata name="flightsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>483, 17</value>

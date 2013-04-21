@@ -32,12 +32,8 @@
             System.Windows.Forms.ToolStripButton SaveRoute;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RouteForm));
             this.DataGrid = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flightdurationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Departure = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.airportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.airportDataSet = new AirLine.AirportDataSet();
-            this.Destination = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.routesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.routeDataContext = new AirLine.RouteDataContext();
             this.routesTableAdapter = new AirLine.RouteDataContextTableAdapters.routesTableAdapter();
@@ -55,6 +51,10 @@
             this.MoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.Sep3 = new System.Windows.Forms.ToolStripSeparator();
             this.CancelEdit = new System.Windows.Forms.ToolStripButton();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FlightDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departure = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Destination = new System.Windows.Forms.DataGridViewComboBoxColumn();
             SaveRoute = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource)).BeginInit();
@@ -82,7 +82,7 @@
             this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.flightdurationDataGridViewTextBoxColumn,
+            this.FlightDuration,
             this.Departure,
             this.Destination});
             this.DataGrid.DataSource = this.routesBindingSource;
@@ -90,31 +90,7 @@
             this.DataGrid.Name = "DataGrid";
             this.DataGrid.Size = new System.Drawing.Size(761, 426);
             this.DataGrid.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // flightdurationDataGridViewTextBoxColumn
-            // 
-            this.flightdurationDataGridViewTextBoxColumn.DataPropertyName = "flight_duration";
-            this.flightdurationDataGridViewTextBoxColumn.HeaderText = "Flight Duration";
-            this.flightdurationDataGridViewTextBoxColumn.Name = "flightdurationDataGridViewTextBoxColumn";
-            // 
-            // Departure
-            // 
-            this.Departure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Departure.DataPropertyName = "departure_id";
-            this.Departure.DataSource = this.airportsBindingSource;
-            this.Departure.DisplayMember = "name";
-            this.Departure.HeaderText = "Departure";
-            this.Departure.Name = "Departure";
-            this.Departure.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Departure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Departure.ValueMember = "id";
+            this.DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_CellContentClick);
             // 
             // airportsBindingSource
             // 
@@ -125,18 +101,6 @@
             // 
             this.airportDataSet.DataSetName = "AirportDataSet";
             this.airportDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Destination
-            // 
-            this.Destination.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Destination.DataPropertyName = "destination_id";
-            this.Destination.DataSource = this.airportsBindingSource;
-            this.Destination.DisplayMember = "name";
-            this.Destination.HeaderText = "Departur";
-            this.Destination.Name = "Destination";
-            this.Destination.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Destination.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Destination.ValueMember = "id";
             // 
             // routesBindingSource
             // 
@@ -284,6 +248,43 @@
             this.CancelEdit.Text = "Cancel Edit";
             this.CancelEdit.Click += new System.EventHandler(this.CancelEdit_Click);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // FlightDuration
+            // 
+            this.FlightDuration.DataPropertyName = "flight_duration";
+            this.FlightDuration.HeaderText = "Flight Duration";
+            this.FlightDuration.Name = "FlightDuration";
+            // 
+            // Departure
+            // 
+            this.Departure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Departure.DataPropertyName = "departure_id";
+            this.Departure.DataSource = this.airportsBindingSource;
+            this.Departure.DisplayMember = "name";
+            this.Departure.HeaderText = "Departure";
+            this.Departure.Name = "Departure";
+            this.Departure.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Departure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Departure.ValueMember = "id";
+            // 
+            // Destination
+            // 
+            this.Destination.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Destination.DataPropertyName = "destination_id";
+            this.Destination.DataSource = this.airportsBindingSource;
+            this.Destination.DisplayMember = "name";
+            this.Destination.HeaderText = "Departur";
+            this.Destination.Name = "Destination";
+            this.Destination.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Destination.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Destination.ValueMember = "id";
+            // 
             // RouteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,10 +317,6 @@
         private AirportDataSet airportDataSet;
         private System.Windows.Forms.BindingSource airportsBindingSource;
         private AirportDataSetTableAdapters.airportsTableAdapter airportsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn flightdurationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Departure;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Destination;
         private System.Windows.Forms.BindingNavigator bindingNavigator;
         private System.Windows.Forms.ToolStripButton AddNew;
         private System.Windows.Forms.ToolStripLabel NavigatorCount;
@@ -333,5 +330,9 @@
         private System.Windows.Forms.ToolStripButton MoveLastItem;
         private System.Windows.Forms.ToolStripSeparator Sep3;
         private System.Windows.Forms.ToolStripButton CancelEdit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FlightDuration;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Departure;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Destination;
     }
 }

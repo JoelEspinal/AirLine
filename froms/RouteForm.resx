@@ -129,11 +129,14 @@
         jxoZmQEA7Qz3fY4WfdEAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="routesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>166, 17</value>
-  </metadata>
   <metadata name="airportsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>621, 17</value>
+  </metadata>
+  <metadata name="routesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>175, 57</value>
+  </metadata>
+  <metadata name="routeDataContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="airportsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>621, 17</value>
@@ -143,15 +146,6 @@
   </metadata>
   <metadata name="airportDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>490, 17</value>
-  </metadata>
-  <metadata name="routesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>166, 17</value>
-  </metadata>
-  <metadata name="routeDataContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="routeDataContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
   <metadata name="routesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>331, 17</value>
@@ -165,14 +159,14 @@
   <data name="AddNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAABESURBVDhPY2DAAr59+/YfG8amFqsYSLOTkxMKBokNVwNw
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAABESURBVDhPY2DAAr59+/YfG8amFqsYSLOTkxMKBokNVwNw
         BRi2MMAasNgCDF0zLj44YIeJAdgCh+hAxJWUR1JKpDQ7AwCTVZKs1/tHmAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="DeleteItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAFMSURBVDhPpVMtj4NAEOUn3E/oT+hPuOBJanEVeKpRVdgG
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAFMSURBVDhPpVMtj4NAEOUn3E/oT+hPuOBJanEVeKpRVdgG
         T1KJPIEHjSIh+MNBQJzD7s0bdlo+dpNLbpMJ7Xy8eTvz1nHozPP8QfYkU2Q/ZDf494f8d52DPNiFc1BQ
         VZXyPI+tbdt3cImfyOosy5TruqooCsTvrwb0p0zTlIOwIAjUOI5gAmY3/I7jmGPII9/Xhp0wEAB8kyTh
         63Rdx4DwAQRMALwHQKc6z/MXC+mGK+1YnUzzkUEeQFAMkGma0P3TWCxOPSymur4OmGFLfyk2MvB9X4Zq
@@ -184,7 +178,7 @@
   <data name="MoveFirstItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAADDSURBVDhPtZPBDcMgDEUzSmdhEuZgAO7M0JybEXLmxCi0
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAADDSURBVDhPtZPBDcMgDEUzSmdhEuZgAO7M0JybEXLmxCi0
         F66UH5kIO2lLEjWSFcD+TzbYwyC+lJIuNhfLwnCmZfy6L85bseC9z8aYrJRihjP4EINYBiJxtNZuhBLk
         nAMkMgiocMjgT3uChCUL1IXUZPD0mPIzvhbDWvqpHA3ALGv+JQYMGmgBYPQecc0GWgZoxTX9vf//ACC3
         WYz38evL1BIuX+K1Z6ReCD1dWC+PNRIBMAexpxt3W7mBnBumdrKOjvMbg5BSbBhy2aUAAAAASUVORK5C
@@ -194,7 +188,7 @@
   <data name="MovePreviousItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAABzSURBVDhPY/j//z8DJZgizSCLqWMAAxr49u3bfCD+jwPP
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAABzSURBVDhPY/j//z8DJZgizSCLqWMAAxr49u3bfCD+jwPP
         hymHuwBZP0xzW1vbfycnJzAGsaGGwTWD9GAYQIpmDAMIaMbqHbgLsGmGOR8XDfIS9QwA+QebKyZOnIgr
         JsDipAZiP3p0Uz8aYTaQnJCGdmYCAAd9ippJd9cpAAAAAElFTkSuQmCC
 </value>
@@ -202,7 +196,7 @@
   <data name="MoveNextItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAABqSURBVDhPY/j//z8DJZgizSCLqWMAAxR8+/ZtPhD/x4Hn
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAABqSURBVDhPY/j//z8DJZgizSCLqWMAAxR8+/ZtPhD/x4Hn
         w9TBaLgLkCVghrS1tf13cnICYxAbaiiKIVgNABlGrCFwA/A4G2w7LpegGABTRIhG9g51DcDlDaK8gB49
         JAci1aKR7IQ0tDMTABdaiok1unVHAAAAAElFTkSuQmCC
 </value>
@@ -210,7 +204,7 @@
   <data name="MoveLastItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAC6SURBVDhPrZMxDsMgDEVzNMTOtVh7hA7NXC7DAbhB2oXV
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAC6SURBVDhPrZMxDsMgDEVzNMTOtVh7hA7NXC7DAbhB2oXV
         5aMSfUiQorqRvoLAfnaczyIii0Y1mZ+csykKRTIIe4Zjay4DSsAtpSTee3HOibW2Cmvs4azE3BukA+Ag
         xtglNgCDEINCgOwAtAY6Vx2TGfLtxDAgoMUxKTyDvLa34M1niMWcGDCtfgZBpxhwB2gVUHEm7uT/gNkA
         18d6mMPZJ6iHqPuNMAXM8bORmjUvWrm6sHOi+jJprvMHWvJ7thP5lIIAAAAASUVORK5CYII=
@@ -227,6 +221,6 @@
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>27</value>
+    <value>180</value>
   </metadata>
 </root>

@@ -46,5 +46,10 @@ namespace AirLine.froms
         {
             this.routesBindingSource.CancelEdit();
         }
+
+        private void DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
