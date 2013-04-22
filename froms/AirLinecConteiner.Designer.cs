@@ -32,15 +32,16 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.FleMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ManageMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.AirportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AircrafMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RoutetripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FligthMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pricesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -68,30 +69,9 @@
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(152, 22);
+            this.Exit.Size = new System.Drawing.Size(92, 22);
             this.Exit.Text = "Exit";
             this.Exit.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 640);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1187, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel.Text = "Estado";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // ManageMenu
             // 
@@ -99,7 +79,8 @@
             this.AirportMenuItem,
             this.AircrafMenuItem,
             this.RoutetripMenuItem,
-            this.FligthMenuItem});
+            this.FligthMenuItem,
+            this.pricesToolStripMenuItem});
             this.ManageMenu.Name = "ManageMenu";
             this.ManageMenu.Size = new System.Drawing.Size(62, 20);
             this.ManageMenu.Text = "Manage";
@@ -131,6 +112,34 @@
             this.FligthMenuItem.Size = new System.Drawing.Size(152, 22);
             this.FligthMenuItem.Text = "Fligth";
             this.FligthMenuItem.Click += new System.EventHandler(this.FligthMenuItem_Click);
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 640);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(1187, 22);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel.Text = "Estado";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // pricesToolStripMenuItem
+            // 
+            this.pricesToolStripMenuItem.Name = "pricesToolStripMenuItem";
+            this.pricesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pricesToolStripMenuItem.Text = "Prices";
+            this.pricesToolStripMenuItem.Click += new System.EventHandler(this.pricesToolStripMenuItem_Click);
             // 
             // airLineConteiner
             // 
@@ -170,6 +179,7 @@
         private System.Windows.Forms.ToolStripMenuItem AircrafMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RoutetripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FligthMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pricesToolStripMenuItem;
     }
 }
 

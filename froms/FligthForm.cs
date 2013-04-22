@@ -43,7 +43,15 @@ namespace AirLine.froms
 
         private void Save_Click(object sender, EventArgs e)
         {
-            this.flightsTableAdapter.Update(fligthDataContext.flights);
+            try 
+            {
+                this.flightsTableAdapter.Update(fligthDataContext.flights);
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("The Fligth could not be saved because the combination of Fligth Number and Departure Time already exists.");
+            }
+            
         }
     }
 }

@@ -139,6 +139,13 @@ namespace AirLine.froms
             fligthForm.MdiParent = this;
             fligthForm.Show();
         }
+
+        private void pricesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PriceForm priceForm = new PriceForm();
+            priceForm.MdiParent = this;
+            priceForm.Show();
+        }
        
     }
 }

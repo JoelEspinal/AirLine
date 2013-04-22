@@ -279,7 +279,7 @@
             this.Destination.DataPropertyName = "destination_id";
             this.Destination.DataSource = this.airportsBindingSource;
             this.Destination.DisplayMember = "name";
-            this.Destination.HeaderText = "Departur";
+            this.Destination.HeaderText = "Destination";
             this.Destination.Name = "Destination";
             this.Destination.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Destination.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;

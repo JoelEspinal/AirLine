@@ -26,7 +26,15 @@ namespace AirLine.froms
 
         private void Save_Click(object sender, EventArgs e)
         {
-            this.aircraftsTableAdapter.Update(this.aircraftDataContext.aircrafts);
+            try
+            {
+                this.aircraftsTableAdapter.Update(this.aircraftDataContext.aircrafts);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("The Aircraft could not be saved because the Code already exists.");
+            }
+            
         }
 
         private void Cancel_Click(object sender, EventArgs e)

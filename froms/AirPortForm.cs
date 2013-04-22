@@ -69,7 +69,14 @@ namespace AirLine.froms
 
         private void Save_Click(object sender, EventArgs e)
         {
-            this.airportsTableAdapter.Update(this.airportDataSet.airports);
+            try
+            {
+                this.airportsTableAdapter.Update(this.airportDataSet.airports);
+            }
+            catch (Exception)
+            {
+                 MessageBox.Show("The Airport could not be saved because the Name and Alias already exists.");
+            }
         }
 
         private void Cancel_Click(object sender, EventArgs e)

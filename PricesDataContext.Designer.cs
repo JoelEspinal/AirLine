@@ -20,17 +20,17 @@ namespace AirLine {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FligthDataContext")]
+    [global::System.Xml.Serialization.XmlRootAttribute("PricesDataContext")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FligthDataContext : global::System.Data.DataSet {
+    public partial class PricesDataContext : global::System.Data.DataSet {
         
-        private flightsDataTable tableflights;
+        private pricesDataTable tableprices;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public FligthDataContext() {
+        public PricesDataContext() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace AirLine {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected FligthDataContext(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected PricesDataContext(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace AirLine {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["flights"] != null)) {
-                    base.Tables.Add(new flightsDataTable(ds.Tables["flights"]));
+                if ((ds.Tables["prices"] != null)) {
+                    base.Tables.Add(new pricesDataTable(ds.Tables["prices"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace AirLine {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public flightsDataTable flights {
+        public pricesDataTable prices {
             get {
-                return this.tableflights;
+                return this.tableprices;
             }
         }
         
@@ -127,7 +127,7 @@ namespace AirLine {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FligthDataContext cln = ((FligthDataContext)(base.Clone()));
+            PricesDataContext cln = ((PricesDataContext)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace AirLine {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["flights"] != null)) {
-                    base.Tables.Add(new flightsDataTable(ds.Tables["flights"]));
+                if ((ds.Tables["prices"] != null)) {
+                    base.Tables.Add(new pricesDataTable(ds.Tables["prices"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace AirLine {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableflights = ((flightsDataTable)(base.Tables["flights"]));
+            this.tableprices = ((pricesDataTable)(base.Tables["prices"]));
             if ((initTable == true)) {
-                if ((this.tableflights != null)) {
-                    this.tableflights.InitVars();
+                if ((this.tableprices != null)) {
+                    this.tableprices.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace AirLine {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FligthDataContext";
+            this.DataSetName = "PricesDataContext";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FligthDataContext.xsd";
+            this.Namespace = "http://tempuri.org/PricesDataContext.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableflights = new flightsDataTable();
-            base.Tables.Add(this.tableflights);
+            this.tableprices = new pricesDataTable();
+            base.Tables.Add(this.tableprices);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeflights() {
+        private bool ShouldSerializeprices() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace AirLine {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FligthDataContext ds = new FligthDataContext();
+            PricesDataContext ds = new PricesDataContext();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,43 +270,39 @@ namespace AirLine {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void flightsRowChangeEventHandler(object sender, flightsRowChangeEvent e);
+        public delegate void pricesRowChangeEventHandler(object sender, pricesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class flightsDataTable : global::System.Data.TypedTableBase<flightsRow> {
+        public partial class pricesDataTable : global::System.Data.TypedTableBase<pricesRow> {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columncreate_at;
+            private global::System.Data.DataColumn columnfligth_id;
             
-            private global::System.Data.DataColumn columndeparture;
+            private global::System.Data.DataColumn columnrt_a_f_price;
             
-            private global::System.Data.DataColumn columnarrival;
+            private global::System.Data.DataColumn columnrt_a_r_price;
             
-            private global::System.Data.DataColumn columnroute_id;
+            private global::System.Data.DataColumn columnrt_c_f_price;
             
-            private global::System.Data.DataColumn columnaircraft_id;
+            private global::System.Data.DataColumn columnrt_c_r_price;
             
-            private global::System.Data.DataColumn columnregular_seats;
+            private global::System.Data.DataColumn columnow_a_f_price;
             
-            private global::System.Data.DataColumn columnfrist_class_seats;
+            private global::System.Data.DataColumn columnow_a_r_price;
             
-            private global::System.Data.DataColumn columntotal_regular_seats;
+            private global::System.Data.DataColumn columnow_c_f_price;
             
-            private global::System.Data.DataColumn columntotal_frist_class_seats;
-            
-            private global::System.Data.DataColumn columnflight_number;
-            
-            private global::System.Data.DataColumn columnflight_name;
+            private global::System.Data.DataColumn columnow_c_r_price;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public flightsDataTable() {
-                this.TableName = "flights";
+            public pricesDataTable() {
+                this.TableName = "prices";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -314,7 +310,7 @@ namespace AirLine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal flightsDataTable(global::System.Data.DataTable table) {
+            internal pricesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -331,7 +327,7 @@ namespace AirLine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected flightsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected pricesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -346,89 +342,73 @@ namespace AirLine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn create_atColumn {
+            public global::System.Data.DataColumn fligth_idColumn {
                 get {
-                    return this.columncreate_at;
+                    return this.columnfligth_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn departureColumn {
+            public global::System.Data.DataColumn rt_a_f_priceColumn {
                 get {
-                    return this.columndeparture;
+                    return this.columnrt_a_f_price;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn arrivalColumn {
+            public global::System.Data.DataColumn rt_a_r_priceColumn {
                 get {
-                    return this.columnarrival;
+                    return this.columnrt_a_r_price;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn route_idColumn {
+            public global::System.Data.DataColumn rt_c_f_priceColumn {
                 get {
-                    return this.columnroute_id;
+                    return this.columnrt_c_f_price;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn aircraft_idColumn {
+            public global::System.Data.DataColumn rt_c_r_priceColumn {
                 get {
-                    return this.columnaircraft_id;
+                    return this.columnrt_c_r_price;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn regular_seatsColumn {
+            public global::System.Data.DataColumn ow_a_f_priceColumn {
                 get {
-                    return this.columnregular_seats;
+                    return this.columnow_a_f_price;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn frist_class_seatsColumn {
+            public global::System.Data.DataColumn ow_a_r_priceColumn {
                 get {
-                    return this.columnfrist_class_seats;
+                    return this.columnow_a_r_price;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn total_regular_seatsColumn {
+            public global::System.Data.DataColumn ow_c_f_priceColumn {
                 get {
-                    return this.columntotal_regular_seats;
+                    return this.columnow_c_f_price;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn total_frist_class_seatsColumn {
+            public global::System.Data.DataColumn ow_c_r_priceColumn {
                 get {
-                    return this.columntotal_frist_class_seats;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn flight_numberColumn {
-                get {
-                    return this.columnflight_number;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn flight_nameColumn {
-                get {
-                    return this.columnflight_name;
+                    return this.columnow_c_r_price;
                 }
             }
             
@@ -443,63 +423,61 @@ namespace AirLine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public flightsRow this[int index] {
+            public pricesRow this[int index] {
                 get {
-                    return ((flightsRow)(this.Rows[index]));
+                    return ((pricesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event flightsRowChangeEventHandler flightsRowChanging;
+            public event pricesRowChangeEventHandler pricesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event flightsRowChangeEventHandler flightsRowChanged;
+            public event pricesRowChangeEventHandler pricesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event flightsRowChangeEventHandler flightsRowDeleting;
+            public event pricesRowChangeEventHandler pricesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event flightsRowChangeEventHandler flightsRowDeleted;
+            public event pricesRowChangeEventHandler pricesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddflightsRow(flightsRow row) {
+            public void AddpricesRow(pricesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public flightsRow AddflightsRow(System.DateTime create_at, System.DateTime departure, System.DateTime arrival, int route_id, int aircraft_id, int regular_seats, int frist_class_seats, int total_regular_seats, int total_frist_class_seats, string flight_number, System.DateTime flight_name) {
-                flightsRow rowflightsRow = ((flightsRow)(this.NewRow()));
+            public pricesRow AddpricesRow(int fligth_id, decimal rt_a_f_price, decimal rt_a_r_price, decimal rt_c_f_price, decimal rt_c_r_price, decimal ow_a_f_price, decimal ow_a_r_price, decimal ow_c_f_price, decimal ow_c_r_price) {
+                pricesRow rowpricesRow = ((pricesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        create_at,
-                        departure,
-                        arrival,
-                        route_id,
-                        aircraft_id,
-                        regular_seats,
-                        frist_class_seats,
-                        total_regular_seats,
-                        total_frist_class_seats,
-                        flight_number,
-                        flight_name};
-                rowflightsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowflightsRow);
-                return rowflightsRow;
+                        fligth_id,
+                        rt_a_f_price,
+                        rt_a_r_price,
+                        rt_c_f_price,
+                        rt_c_r_price,
+                        ow_a_f_price,
+                        ow_a_r_price,
+                        ow_c_f_price,
+                        ow_c_r_price};
+                rowpricesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowpricesRow);
+                return rowpricesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public flightsRow FindByid(int id) {
-                return ((flightsRow)(this.Rows.Find(new object[] {
+            public pricesRow FindByid(int id) {
+                return ((pricesRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                flightsDataTable cln = ((flightsDataTable)(base.Clone()));
+                pricesDataTable cln = ((pricesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -507,24 +485,22 @@ namespace AirLine {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new flightsDataTable();
+                return new pricesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
-                this.columncreate_at = base.Columns["create_at"];
-                this.columndeparture = base.Columns["departure"];
-                this.columnarrival = base.Columns["arrival"];
-                this.columnroute_id = base.Columns["route_id"];
-                this.columnaircraft_id = base.Columns["aircraft_id"];
-                this.columnregular_seats = base.Columns["regular_seats"];
-                this.columnfrist_class_seats = base.Columns["frist_class_seats"];
-                this.columntotal_regular_seats = base.Columns["total_regular_seats"];
-                this.columntotal_frist_class_seats = base.Columns["total_frist_class_seats"];
-                this.columnflight_number = base.Columns["flight_number"];
-                this.columnflight_name = base.Columns["flight_name"];
+                this.columnfligth_id = base.Columns["fligth_id"];
+                this.columnrt_a_f_price = base.Columns["rt_a_f_price"];
+                this.columnrt_a_r_price = base.Columns["rt_a_r_price"];
+                this.columnrt_c_f_price = base.Columns["rt_c_f_price"];
+                this.columnrt_c_r_price = base.Columns["rt_c_r_price"];
+                this.columnow_a_f_price = base.Columns["ow_a_f_price"];
+                this.columnow_a_r_price = base.Columns["ow_a_r_price"];
+                this.columnow_c_f_price = base.Columns["ow_c_f_price"];
+                this.columnow_c_r_price = base.Columns["ow_c_r_price"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -532,28 +508,24 @@ namespace AirLine {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columncreate_at = new global::System.Data.DataColumn("create_at", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncreate_at);
-                this.columndeparture = new global::System.Data.DataColumn("departure", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndeparture);
-                this.columnarrival = new global::System.Data.DataColumn("arrival", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnarrival);
-                this.columnroute_id = new global::System.Data.DataColumn("route_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnroute_id);
-                this.columnaircraft_id = new global::System.Data.DataColumn("aircraft_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaircraft_id);
-                this.columnregular_seats = new global::System.Data.DataColumn("regular_seats", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnregular_seats);
-                this.columnfrist_class_seats = new global::System.Data.DataColumn("frist_class_seats", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfrist_class_seats);
-                this.columntotal_regular_seats = new global::System.Data.DataColumn("total_regular_seats", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotal_regular_seats);
-                this.columntotal_frist_class_seats = new global::System.Data.DataColumn("total_frist_class_seats", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotal_frist_class_seats);
-                this.columnflight_number = new global::System.Data.DataColumn("flight_number", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnflight_number);
-                this.columnflight_name = new global::System.Data.DataColumn("flight_name", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnflight_name);
+                this.columnfligth_id = new global::System.Data.DataColumn("fligth_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfligth_id);
+                this.columnrt_a_f_price = new global::System.Data.DataColumn("rt_a_f_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrt_a_f_price);
+                this.columnrt_a_r_price = new global::System.Data.DataColumn("rt_a_r_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrt_a_r_price);
+                this.columnrt_c_f_price = new global::System.Data.DataColumn("rt_c_f_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrt_c_f_price);
+                this.columnrt_c_r_price = new global::System.Data.DataColumn("rt_c_r_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrt_c_r_price);
+                this.columnow_a_f_price = new global::System.Data.DataColumn("ow_a_f_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnow_a_f_price);
+                this.columnow_a_r_price = new global::System.Data.DataColumn("ow_a_r_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnow_a_r_price);
+                this.columnow_c_f_price = new global::System.Data.DataColumn("ow_c_f_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnow_c_f_price);
+                this.columnow_c_r_price = new global::System.Data.DataColumn("ow_c_r_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnow_c_r_price);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -562,36 +534,32 @@ namespace AirLine {
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
-                this.columndeparture.AllowDBNull = false;
-                this.columnarrival.AllowDBNull = false;
-                this.columnflight_number.MaxLength = 6;
-                this.columnflight_name.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public flightsRow NewflightsRow() {
-                return ((flightsRow)(this.NewRow()));
+            public pricesRow NewpricesRow() {
+                return ((pricesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new flightsRow(builder);
+                return new pricesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(flightsRow);
+                return typeof(pricesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.flightsRowChanged != null)) {
-                    this.flightsRowChanged(this, new flightsRowChangeEvent(((flightsRow)(e.Row)), e.Action));
+                if ((this.pricesRowChanged != null)) {
+                    this.pricesRowChanged(this, new pricesRowChangeEvent(((pricesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -599,8 +567,8 @@ namespace AirLine {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.flightsRowChanging != null)) {
-                    this.flightsRowChanging(this, new flightsRowChangeEvent(((flightsRow)(e.Row)), e.Action));
+                if ((this.pricesRowChanging != null)) {
+                    this.pricesRowChanging(this, new pricesRowChangeEvent(((pricesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -608,8 +576,8 @@ namespace AirLine {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.flightsRowDeleted != null)) {
-                    this.flightsRowDeleted(this, new flightsRowChangeEvent(((flightsRow)(e.Row)), e.Action));
+                if ((this.pricesRowDeleted != null)) {
+                    this.pricesRowDeleted(this, new pricesRowChangeEvent(((pricesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -617,14 +585,14 @@ namespace AirLine {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.flightsRowDeleting != null)) {
-                    this.flightsRowDeleting(this, new flightsRowChangeEvent(((flightsRow)(e.Row)), e.Action));
+                if ((this.pricesRowDeleting != null)) {
+                    this.pricesRowDeleting(this, new pricesRowChangeEvent(((pricesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveflightsRow(flightsRow row) {
+            public void RemovepricesRow(pricesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -633,7 +601,7 @@ namespace AirLine {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FligthDataContext ds = new FligthDataContext();
+                PricesDataContext ds = new PricesDataContext();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -651,7 +619,7 @@ namespace AirLine {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "flightsDataTable";
+                attribute2.FixedValue = "pricesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -695,300 +663,278 @@ namespace AirLine {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class flightsRow : global::System.Data.DataRow {
+        public partial class pricesRow : global::System.Data.DataRow {
             
-            private flightsDataTable tableflights;
+            private pricesDataTable tableprices;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal flightsRow(global::System.Data.DataRowBuilder rb) : 
+            internal pricesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableflights = ((flightsDataTable)(this.Table));
+                this.tableprices = ((pricesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tableflights.idColumn]));
+                    return ((int)(this[this.tableprices.idColumn]));
                 }
                 set {
-                    this[this.tableflights.idColumn] = value;
+                    this[this.tableprices.idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime create_at {
+            public int fligth_id {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableflights.create_atColumn]));
+                        return ((int)(this[this.tableprices.fligth_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'create_at\' in table \'flights\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'fligth_id\' in table \'prices\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableflights.create_atColumn] = value;
+                    this[this.tableprices.fligth_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime departure {
-                get {
-                    return ((global::System.DateTime)(this[this.tableflights.departureColumn]));
-                }
-                set {
-                    this[this.tableflights.departureColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime arrival {
-                get {
-                    return ((global::System.DateTime)(this[this.tableflights.arrivalColumn]));
-                }
-                set {
-                    this[this.tableflights.arrivalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int route_id {
+            public decimal rt_a_f_price {
                 get {
                     try {
-                        return ((int)(this[this.tableflights.route_idColumn]));
+                        return ((decimal)(this[this.tableprices.rt_a_f_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'route_id\' in table \'flights\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'rt_a_f_price\' in table \'prices\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableflights.route_idColumn] = value;
+                    this[this.tableprices.rt_a_f_priceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int aircraft_id {
+            public decimal rt_a_r_price {
                 get {
                     try {
-                        return ((int)(this[this.tableflights.aircraft_idColumn]));
+                        return ((decimal)(this[this.tableprices.rt_a_r_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'aircraft_id\' in table \'flights\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'rt_a_r_price\' in table \'prices\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableflights.aircraft_idColumn] = value;
+                    this[this.tableprices.rt_a_r_priceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int regular_seats {
+            public decimal rt_c_f_price {
                 get {
                     try {
-                        return ((int)(this[this.tableflights.regular_seatsColumn]));
+                        return ((decimal)(this[this.tableprices.rt_c_f_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'regular_seats\' in table \'flights\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'rt_c_f_price\' in table \'prices\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableflights.regular_seatsColumn] = value;
+                    this[this.tableprices.rt_c_f_priceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int frist_class_seats {
+            public decimal rt_c_r_price {
                 get {
                     try {
-                        return ((int)(this[this.tableflights.frist_class_seatsColumn]));
+                        return ((decimal)(this[this.tableprices.rt_c_r_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'frist_class_seats\' in table \'flights\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'rt_c_r_price\' in table \'prices\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableflights.frist_class_seatsColumn] = value;
+                    this[this.tableprices.rt_c_r_priceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int total_regular_seats {
+            public decimal ow_a_f_price {
                 get {
                     try {
-                        return ((int)(this[this.tableflights.total_regular_seatsColumn]));
+                        return ((decimal)(this[this.tableprices.ow_a_f_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'total_regular_seats\' in table \'flights\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ow_a_f_price\' in table \'prices\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableflights.total_regular_seatsColumn] = value;
+                    this[this.tableprices.ow_a_f_priceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int total_frist_class_seats {
+            public decimal ow_a_r_price {
                 get {
                     try {
-                        return ((int)(this[this.tableflights.total_frist_class_seatsColumn]));
+                        return ((decimal)(this[this.tableprices.ow_a_r_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'total_frist_class_seats\' in table \'flights\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ow_a_r_price\' in table \'prices\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableflights.total_frist_class_seatsColumn] = value;
+                    this[this.tableprices.ow_a_r_priceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string flight_number {
+            public decimal ow_c_f_price {
                 get {
                     try {
-                        return ((string)(this[this.tableflights.flight_numberColumn]));
+                        return ((decimal)(this[this.tableprices.ow_c_f_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'flight_number\' in table \'flights\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ow_c_f_price\' in table \'prices\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableflights.flight_numberColumn] = value;
+                    this[this.tableprices.ow_c_f_priceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime flight_name {
+            public decimal ow_c_r_price {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableflights.flight_nameColumn]));
+                        return ((decimal)(this[this.tableprices.ow_c_r_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'flight_name\' in table \'flights\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ow_c_r_price\' in table \'prices\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableflights.flight_nameColumn] = value;
+                    this[this.tableprices.ow_c_r_priceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Iscreate_atNull() {
-                return this.IsNull(this.tableflights.create_atColumn);
+            public bool Isfligth_idNull() {
+                return this.IsNull(this.tableprices.fligth_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setcreate_atNull() {
-                this[this.tableflights.create_atColumn] = global::System.Convert.DBNull;
+            public void Setfligth_idNull() {
+                this[this.tableprices.fligth_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isroute_idNull() {
-                return this.IsNull(this.tableflights.route_idColumn);
+            public bool Isrt_a_f_priceNull() {
+                return this.IsNull(this.tableprices.rt_a_f_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setroute_idNull() {
-                this[this.tableflights.route_idColumn] = global::System.Convert.DBNull;
+            public void Setrt_a_f_priceNull() {
+                this[this.tableprices.rt_a_f_priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isaircraft_idNull() {
-                return this.IsNull(this.tableflights.aircraft_idColumn);
+            public bool Isrt_a_r_priceNull() {
+                return this.IsNull(this.tableprices.rt_a_r_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setaircraft_idNull() {
-                this[this.tableflights.aircraft_idColumn] = global::System.Convert.DBNull;
+            public void Setrt_a_r_priceNull() {
+                this[this.tableprices.rt_a_r_priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isregular_seatsNull() {
-                return this.IsNull(this.tableflights.regular_seatsColumn);
+            public bool Isrt_c_f_priceNull() {
+                return this.IsNull(this.tableprices.rt_c_f_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setregular_seatsNull() {
-                this[this.tableflights.regular_seatsColumn] = global::System.Convert.DBNull;
+            public void Setrt_c_f_priceNull() {
+                this[this.tableprices.rt_c_f_priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isfrist_class_seatsNull() {
-                return this.IsNull(this.tableflights.frist_class_seatsColumn);
+            public bool Isrt_c_r_priceNull() {
+                return this.IsNull(this.tableprices.rt_c_r_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setfrist_class_seatsNull() {
-                this[this.tableflights.frist_class_seatsColumn] = global::System.Convert.DBNull;
+            public void Setrt_c_r_priceNull() {
+                this[this.tableprices.rt_c_r_priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istotal_regular_seatsNull() {
-                return this.IsNull(this.tableflights.total_regular_seatsColumn);
+            public bool Isow_a_f_priceNull() {
+                return this.IsNull(this.tableprices.ow_a_f_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settotal_regular_seatsNull() {
-                this[this.tableflights.total_regular_seatsColumn] = global::System.Convert.DBNull;
+            public void Setow_a_f_priceNull() {
+                this[this.tableprices.ow_a_f_priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istotal_frist_class_seatsNull() {
-                return this.IsNull(this.tableflights.total_frist_class_seatsColumn);
+            public bool Isow_a_r_priceNull() {
+                return this.IsNull(this.tableprices.ow_a_r_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settotal_frist_class_seatsNull() {
-                this[this.tableflights.total_frist_class_seatsColumn] = global::System.Convert.DBNull;
+            public void Setow_a_r_priceNull() {
+                this[this.tableprices.ow_a_r_priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isflight_numberNull() {
-                return this.IsNull(this.tableflights.flight_numberColumn);
+            public bool Isow_c_f_priceNull() {
+                return this.IsNull(this.tableprices.ow_c_f_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setflight_numberNull() {
-                this[this.tableflights.flight_numberColumn] = global::System.Convert.DBNull;
+            public void Setow_c_f_priceNull() {
+                this[this.tableprices.ow_c_f_priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isflight_nameNull() {
-                return this.IsNull(this.tableflights.flight_nameColumn);
+            public bool Isow_c_r_priceNull() {
+                return this.IsNull(this.tableprices.ow_c_r_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setflight_nameNull() {
-                this[this.tableflights.flight_nameColumn] = global::System.Convert.DBNull;
+            public void Setow_c_r_priceNull() {
+                this[this.tableprices.ow_c_r_priceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -996,22 +942,22 @@ namespace AirLine {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class flightsRowChangeEvent : global::System.EventArgs {
+        public class pricesRowChangeEvent : global::System.EventArgs {
             
-            private flightsRow eventRow;
+            private pricesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public flightsRowChangeEvent(flightsRow row, global::System.Data.DataRowAction action) {
+            public pricesRowChangeEvent(pricesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public flightsRow Row {
+            public pricesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1027,7 +973,7 @@ namespace AirLine {
         }
     }
 }
-namespace AirLine.FligthDataContextTableAdapters {
+namespace AirLine.PricesDataContextTableAdapters {
     
     
     /// <summary>
@@ -1039,7 +985,7 @@ namespace AirLine.FligthDataContextTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class flightsTableAdapter : global::System.ComponentModel.Component {
+    public partial class pricesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1053,7 +999,7 @@ namespace AirLine.FligthDataContextTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public flightsTableAdapter() {
+        public pricesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1150,111 +1096,88 @@ namespace AirLine.FligthDataContextTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "flights";
+            tableMapping.DataSetTable = "prices";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("create_at", "create_at");
-            tableMapping.ColumnMappings.Add("departure", "departure");
-            tableMapping.ColumnMappings.Add("arrival", "arrival");
-            tableMapping.ColumnMappings.Add("route_id", "route_id");
-            tableMapping.ColumnMappings.Add("aircraft_id", "aircraft_id");
-            tableMapping.ColumnMappings.Add("regular_seats", "regular_seats");
-            tableMapping.ColumnMappings.Add("frist_class_seats", "frist_class_seats");
-            tableMapping.ColumnMappings.Add("total_regular_seats", "total_regular_seats");
-            tableMapping.ColumnMappings.Add("total_frist_class_seats", "total_frist_class_seats");
-            tableMapping.ColumnMappings.Add("flight_number", "flight_number");
-            tableMapping.ColumnMappings.Add("flight_name", "flight_name");
+            tableMapping.ColumnMappings.Add("fligth_id", "fligth_id");
+            tableMapping.ColumnMappings.Add("rt_a_f_price", "rt_a_f_price");
+            tableMapping.ColumnMappings.Add("rt_a_r_price", "rt_a_r_price");
+            tableMapping.ColumnMappings.Add("rt_c_f_price", "rt_c_f_price");
+            tableMapping.ColumnMappings.Add("rt_c_r_price", "rt_c_r_price");
+            tableMapping.ColumnMappings.Add("ow_a_f_price", "ow_a_f_price");
+            tableMapping.ColumnMappings.Add("ow_a_r_price", "ow_a_r_price");
+            tableMapping.ColumnMappings.Add("ow_c_f_price", "ow_c_f_price");
+            tableMapping.ColumnMappings.Add("ow_c_r_price", "ow_c_r_price");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [flights] WHERE (([id] = @Original_id) AND ((@IsNull_create_at = 1 AND [create_at] IS NULL) OR ([create_at] = @Original_create_at)) AND ((@IsNull_flight_number = 1 AND [flight_number] IS NULL) OR ([flight_number] = @Original_flight_number)) AND ([departure] = @Original_departure) AND ([arrival] = @Original_arrival) AND ((@IsNull_route_id = 1 AND [route_id] IS NULL) OR ([route_id] = @Original_route_id)) AND ((@IsNull_aircraft_id = 1 AND [aircraft_id] IS NULL) OR ([aircraft_id] = @Original_aircraft_id)) AND ((@IsNull_regular_seats = 1 AND [regular_seats] IS NULL) OR ([regular_seats] = @Original_regular_seats)) AND ((@IsNull_frist_class_seats = 1 AND [frist_class_seats] IS NULL) OR ([frist_class_seats] = @Original_frist_class_seats)) AND ((@IsNull_total_regular_seats = 1 AND [total_regular_seats] IS NULL) OR ([total_regular_seats] = @Original_total_regular_seats)) AND ((@IsNull_total_frist_class_seats = 1 AND [total_frist_class_seats] IS NULL) OR ([total_frist_class_seats] = @Original_total_frist_class_seats)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[prices] WHERE (([id] = @Original_id) AND ((@IsNull_fligth_id = 1 AND [fligth_id] IS NULL) OR ([fligth_id] = @Original_fligth_id)) AND ((@IsNull_rt_a_f_price = 1 AND [rt_a_f_price] IS NULL) OR ([rt_a_f_price] = @Original_rt_a_f_price)) AND ((@IsNull_rt_a_r_price = 1 AND [rt_a_r_price] IS NULL) OR ([rt_a_r_price] = @Original_rt_a_r_price)) AND ((@IsNull_rt_c_f_price = 1 AND [rt_c_f_price] IS NULL) OR ([rt_c_f_price] = @Original_rt_c_f_price)) AND ((@IsNull_rt_c_r_price = 1 AND [rt_c_r_price] IS NULL) OR ([rt_c_r_price] = @Original_rt_c_r_price)) AND ((@IsNull_ow_a_f_price = 1 AND [ow_a_f_price] IS NULL) OR ([ow_a_f_price] = @Original_ow_a_f_price)) AND ((@IsNull_ow_a_r_price = 1 AND [ow_a_r_price] IS NULL) OR ([ow_a_r_price] = @Original_ow_a_r_price)) AND ((@IsNull_ow_c_f_price = 1 AND [ow_c_f_price] IS NULL) OR ([ow_c_f_price] = @Original_ow_c_f_price)) AND ((@IsNull_ow_c_r_price = 1 AND [ow_c_r_price] IS NULL) OR ([ow_c_r_price] = @Original_ow_c_r_price)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_create_at", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "create_at", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_create_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "create_at", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_flight_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flight_number", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_departure", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "departure", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_arrival", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "arrival", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_route_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "route_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_route_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "route_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_aircraft_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aircraft_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_aircraft_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aircraft_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "regular_seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "regular_seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "frist_class_seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "frist_class_seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_total_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_regular_seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_regular_seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_total_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_frist_class_seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_frist_class_seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fligth_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fligth_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fligth_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fligth_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rt_a_f_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rt_a_f_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rt_a_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_a_f_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rt_a_r_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rt_a_r_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rt_a_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_a_r_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rt_c_f_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rt_c_f_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rt_c_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_c_f_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rt_c_r_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rt_c_r_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rt_c_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_c_r_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ow_a_f_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ow_a_f_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ow_a_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_a_f_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ow_a_r_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ow_a_r_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ow_a_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_a_r_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ow_c_f_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ow_c_f_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ow_c_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_c_f_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ow_c_r_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ow_c_r_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ow_c_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_c_r_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [flights] ([create_at], [flight_number], [departure], [arrival], [route_id], [aircraft_id], [regular_seats], [frist_class_seats], [total_regular_seats], [total_frist_class_seats]) VALUES (@create_at, @flight_number, @departure, @arrival, @route_id, @aircraft_id, @regular_seats, @frist_class_seats, @total_regular_seats, @total_frist_class_seats);
-SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure AS flight_name, arrival, route_id, aircraft_id, regular_seats, frist_class_seats, total_regular_seats, total_frist_class_seats FROM flights WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[prices] ([fligth_id], [rt_a_f_price], [rt_a_r_price], [rt_c_f_price], [rt_c_r_price], [ow_a_f_price], [ow_a_r_price], [ow_c_f_price], [ow_c_r_price]) VALUES (@fligth_id, @rt_a_f_price, @rt_a_r_price, @rt_c_f_price, @rt_c_r_price, @ow_a_f_price, @ow_a_r_price, @ow_c_f_price, @ow_c_r_price);
+SELECT id, fligth_id, rt_a_f_price, rt_a_r_price, rt_c_f_price, rt_c_r_price, ow_a_f_price, ow_a_r_price, ow_c_f_price, ow_c_r_price FROM prices WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@create_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "create_at", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flight_number", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@departure", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "departure", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@arrival", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "arrival", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@route_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "route_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@aircraft_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aircraft_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "regular_seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "frist_class_seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_regular_seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_frist_class_seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fligth_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fligth_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rt_a_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_a_f_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rt_a_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_a_r_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rt_c_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_c_f_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rt_c_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_c_r_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ow_a_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_a_f_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ow_a_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_a_r_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ow_c_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_c_f_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ow_c_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_c_r_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [flights] SET [create_at] = @create_at, [flight_number] = @flight_number, " +
-                "[departure] = @departure, [arrival] = @arrival, [route_id] = @route_id, [aircraf" +
-                "t_id] = @aircraft_id, [regular_seats] = @regular_seats, [frist_class_seats] = @f" +
-                "rist_class_seats, [total_regular_seats] = @total_regular_seats, [total_frist_cla" +
-                "ss_seats] = @total_frist_class_seats WHERE (([id] = @Original_id) AND ((@IsNull_" +
-                "create_at = 1 AND [create_at] IS NULL) OR ([create_at] = @Original_create_at)) A" +
-                "ND ((@IsNull_flight_number = 1 AND [flight_number] IS NULL) OR ([flight_number] " +
-                "= @Original_flight_number)) AND ([departure] = @Original_departure) AND ([arriva" +
-                "l] = @Original_arrival) AND ((@IsNull_route_id = 1 AND [route_id] IS NULL) OR ([" +
-                "route_id] = @Original_route_id)) AND ((@IsNull_aircraft_id = 1 AND [aircraft_id]" +
-                " IS NULL) OR ([aircraft_id] = @Original_aircraft_id)) AND ((@IsNull_regular_seat" +
-                "s = 1 AND [regular_seats] IS NULL) OR ([regular_seats] = @Original_regular_seats" +
-                ")) AND ((@IsNull_frist_class_seats = 1 AND [frist_class_seats] IS NULL) OR ([fri" +
-                "st_class_seats] = @Original_frist_class_seats)) AND ((@IsNull_total_regular_seat" +
-                "s = 1 AND [total_regular_seats] IS NULL) OR ([total_regular_seats] = @Original_t" +
-                "otal_regular_seats)) AND ((@IsNull_total_frist_class_seats = 1 AND [total_frist_" +
-                "class_seats] IS NULL) OR ([total_frist_class_seats] = @Original_total_frist_clas" +
-                "s_seats)));\r\nSELECT id, create_at, flight_number, departure, flight_number + \' \'" +
-                " + departure AS flight_name, arrival, route_id, aircraft_id, regular_seats, fris" +
-                "t_class_seats, total_regular_seats, total_frist_class_seats FROM flights WHERE (" +
-                "id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[prices] SET [fligth_id] = @fligth_id, [rt_a_f_price] = @rt_a_f_price, [rt_a_r_price] = @rt_a_r_price, [rt_c_f_price] = @rt_c_f_price, [rt_c_r_price] = @rt_c_r_price, [ow_a_f_price] = @ow_a_f_price, [ow_a_r_price] = @ow_a_r_price, [ow_c_f_price] = @ow_c_f_price, [ow_c_r_price] = @ow_c_r_price WHERE (([id] = @Original_id) AND ((@IsNull_fligth_id = 1 AND [fligth_id] IS NULL) OR ([fligth_id] = @Original_fligth_id)) AND ((@IsNull_rt_a_f_price = 1 AND [rt_a_f_price] IS NULL) OR ([rt_a_f_price] = @Original_rt_a_f_price)) AND ((@IsNull_rt_a_r_price = 1 AND [rt_a_r_price] IS NULL) OR ([rt_a_r_price] = @Original_rt_a_r_price)) AND ((@IsNull_rt_c_f_price = 1 AND [rt_c_f_price] IS NULL) OR ([rt_c_f_price] = @Original_rt_c_f_price)) AND ((@IsNull_rt_c_r_price = 1 AND [rt_c_r_price] IS NULL) OR ([rt_c_r_price] = @Original_rt_c_r_price)) AND ((@IsNull_ow_a_f_price = 1 AND [ow_a_f_price] IS NULL) OR ([ow_a_f_price] = @Original_ow_a_f_price)) AND ((@IsNull_ow_a_r_price = 1 AND [ow_a_r_price] IS NULL) OR ([ow_a_r_price] = @Original_ow_a_r_price)) AND ((@IsNull_ow_c_f_price = 1 AND [ow_c_f_price] IS NULL) OR ([ow_c_f_price] = @Original_ow_c_f_price)) AND ((@IsNull_ow_c_r_price = 1 AND [ow_c_r_price] IS NULL) OR ([ow_c_r_price] = @Original_ow_c_r_price)));
+SELECT id, fligth_id, rt_a_f_price, rt_a_r_price, rt_c_f_price, rt_c_r_price, ow_a_f_price, ow_a_r_price, ow_c_f_price, ow_c_r_price FROM prices WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@create_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "create_at", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flight_number", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@departure", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "departure", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@arrival", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "arrival", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@route_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "route_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@aircraft_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aircraft_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "regular_seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "frist_class_seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_regular_seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_frist_class_seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fligth_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fligth_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rt_a_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_a_f_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rt_a_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_a_r_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rt_c_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_c_f_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rt_c_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_c_r_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ow_a_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_a_f_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ow_a_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_a_r_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ow_c_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_c_f_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ow_c_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_c_r_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_create_at", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "create_at", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_create_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "create_at", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_flight_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flight_number", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_departure", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "departure", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_arrival", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "arrival", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_route_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "route_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_route_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "route_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_aircraft_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aircraft_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_aircraft_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aircraft_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "regular_seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "regular_seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "frist_class_seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "frist_class_seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_total_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_regular_seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total_regular_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_regular_seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_total_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_frist_class_seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total_frist_class_seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_frist_class_seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fligth_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fligth_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fligth_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fligth_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rt_a_f_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rt_a_f_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rt_a_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_a_f_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rt_a_r_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rt_a_r_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rt_a_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_a_r_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rt_c_f_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rt_c_f_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rt_c_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_c_f_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rt_c_r_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rt_c_r_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rt_c_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "rt_c_r_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ow_a_f_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ow_a_f_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ow_a_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_a_f_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ow_a_r_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ow_a_r_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ow_a_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_a_r_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ow_c_f_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ow_c_f_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ow_c_f_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_c_f_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ow_c_r_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ow_c_r_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ow_c_r_price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "ow_c_r_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1271,9 +1194,9 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, create_at, flight_number, departure, flight_number + \' \' + departure A" +
-                "S flight_name, arrival, route_id, aircraft_id, regular_seats, frist_class_seats," +
-                " total_regular_seats, total_frist_class_seats FROM flights";
+            this._commandCollection[0].CommandText = "SELECT        id, fligth_id, rt_a_f_price, rt_a_r_price, rt_c_f_price, rt_c_r_pri" +
+                "ce, ow_a_f_price, ow_a_r_price, ow_c_f_price, ow_c_r_price\r\nFROM            pric" +
+                "es AS p";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1281,7 +1204,7 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FligthDataContext.flightsDataTable dataTable) {
+        public virtual int Fill(PricesDataContext.pricesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1294,9 +1217,9 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FligthDataContext.flightsDataTable GetData() {
+        public virtual PricesDataContext.pricesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FligthDataContext.flightsDataTable dataTable = new FligthDataContext.flightsDataTable();
+            PricesDataContext.pricesDataTable dataTable = new PricesDataContext.pricesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1304,15 +1227,15 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FligthDataContext.flightsDataTable dataTable) {
+        public virtual int Update(PricesDataContext.pricesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FligthDataContext dataSet) {
-            return this.Adapter.Update(dataSet, "flights");
+        public virtual int Update(PricesDataContext dataSet) {
+            return this.Adapter.Update(dataSet, "prices");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1334,69 +1257,75 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, global::System.Nullable<global::System.DateTime> Original_create_at, string Original_flight_number, System.DateTime Original_departure, System.DateTime Original_arrival, global::System.Nullable<int> Original_route_id, global::System.Nullable<int> Original_aircraft_id, global::System.Nullable<int> Original_regular_seats, global::System.Nullable<int> Original_frist_class_seats, global::System.Nullable<int> Original_total_regular_seats, global::System.Nullable<int> Original_total_frist_class_seats) {
+        public virtual int Delete(int Original_id, global::System.Nullable<int> Original_fligth_id, global::System.Nullable<decimal> Original_rt_a_f_price, global::System.Nullable<decimal> Original_rt_a_r_price, global::System.Nullable<decimal> Original_rt_c_f_price, global::System.Nullable<decimal> Original_rt_c_r_price, global::System.Nullable<decimal> Original_ow_a_f_price, global::System.Nullable<decimal> Original_ow_a_r_price, global::System.Nullable<decimal> Original_ow_c_f_price, global::System.Nullable<decimal> Original_ow_c_r_price) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            if ((Original_create_at.HasValue == true)) {
+            if ((Original_fligth_id.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_create_at.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_fligth_id.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_flight_number == null)) {
+            if ((Original_rt_a_f_price.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_rt_a_f_price.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_flight_number));
+            if ((Original_rt_a_r_price.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_rt_a_r_price.Value));
             }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_departure));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_arrival));
-            if ((Original_route_id.HasValue == true)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_rt_c_f_price.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_route_id.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_rt_c_f_price.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_aircraft_id.HasValue == true)) {
+            if ((Original_rt_c_r_price.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_aircraft_id.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_rt_c_r_price.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_regular_seats.HasValue == true)) {
+            if ((Original_ow_a_f_price.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_regular_seats.Value));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_ow_a_f_price.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_frist_class_seats.HasValue == true)) {
+            if ((Original_ow_a_r_price.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_frist_class_seats.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((decimal)(Original_ow_a_r_price.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_total_regular_seats.HasValue == true)) {
+            if ((Original_ow_c_f_price.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_total_regular_seats.Value));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((decimal)(Original_ow_c_f_price.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_total_frist_class_seats.HasValue == true)) {
+            if ((Original_ow_c_r_price.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_total_frist_class_seats.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((decimal)(Original_ow_c_r_price.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
@@ -1422,56 +1351,60 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> create_at, string flight_number, System.DateTime departure, System.DateTime arrival, global::System.Nullable<int> route_id, global::System.Nullable<int> aircraft_id, global::System.Nullable<int> regular_seats, global::System.Nullable<int> frist_class_seats, global::System.Nullable<int> total_regular_seats, global::System.Nullable<int> total_frist_class_seats) {
-            if ((create_at.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(create_at.Value));
+        public virtual int Insert(global::System.Nullable<int> fligth_id, global::System.Nullable<decimal> rt_a_f_price, global::System.Nullable<decimal> rt_a_r_price, global::System.Nullable<decimal> rt_c_f_price, global::System.Nullable<decimal> rt_c_r_price, global::System.Nullable<decimal> ow_a_f_price, global::System.Nullable<decimal> ow_a_r_price, global::System.Nullable<decimal> ow_c_f_price, global::System.Nullable<decimal> ow_c_r_price) {
+            if ((fligth_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(fligth_id.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((flight_number == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            if ((rt_a_f_price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(rt_a_f_price.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(flight_number));
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(departure));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(arrival));
-            if ((route_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(route_id.Value));
+            if ((rt_a_r_price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(rt_a_r_price.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((rt_c_f_price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(rt_c_f_price.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((rt_c_r_price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(rt_c_r_price.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((aircraft_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(aircraft_id.Value));
+            if ((ow_a_f_price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(ow_a_f_price.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((regular_seats.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(regular_seats.Value));
+            if ((ow_a_r_price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(ow_a_r_price.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((frist_class_seats.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(frist_class_seats.Value));
+            if ((ow_c_f_price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(ow_c_f_price.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((total_regular_seats.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(total_regular_seats.Value));
+            if ((ow_c_r_price.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(ow_c_r_price.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((total_frist_class_seats.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(total_frist_class_seats.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1494,146 +1427,154 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    global::System.Nullable<global::System.DateTime> create_at, 
-                    string flight_number, 
-                    System.DateTime departure, 
-                    System.DateTime arrival, 
-                    global::System.Nullable<int> route_id, 
-                    global::System.Nullable<int> aircraft_id, 
-                    global::System.Nullable<int> regular_seats, 
-                    global::System.Nullable<int> frist_class_seats, 
-                    global::System.Nullable<int> total_regular_seats, 
-                    global::System.Nullable<int> total_frist_class_seats, 
+                    global::System.Nullable<int> fligth_id, 
+                    global::System.Nullable<decimal> rt_a_f_price, 
+                    global::System.Nullable<decimal> rt_a_r_price, 
+                    global::System.Nullable<decimal> rt_c_f_price, 
+                    global::System.Nullable<decimal> rt_c_r_price, 
+                    global::System.Nullable<decimal> ow_a_f_price, 
+                    global::System.Nullable<decimal> ow_a_r_price, 
+                    global::System.Nullable<decimal> ow_c_f_price, 
+                    global::System.Nullable<decimal> ow_c_r_price, 
                     int Original_id, 
-                    global::System.Nullable<global::System.DateTime> Original_create_at, 
-                    string Original_flight_number, 
-                    System.DateTime Original_departure, 
-                    System.DateTime Original_arrival, 
-                    global::System.Nullable<int> Original_route_id, 
-                    global::System.Nullable<int> Original_aircraft_id, 
-                    global::System.Nullable<int> Original_regular_seats, 
-                    global::System.Nullable<int> Original_frist_class_seats, 
-                    global::System.Nullable<int> Original_total_regular_seats, 
-                    global::System.Nullable<int> Original_total_frist_class_seats, 
+                    global::System.Nullable<int> Original_fligth_id, 
+                    global::System.Nullable<decimal> Original_rt_a_f_price, 
+                    global::System.Nullable<decimal> Original_rt_a_r_price, 
+                    global::System.Nullable<decimal> Original_rt_c_f_price, 
+                    global::System.Nullable<decimal> Original_rt_c_r_price, 
+                    global::System.Nullable<decimal> Original_ow_a_f_price, 
+                    global::System.Nullable<decimal> Original_ow_a_r_price, 
+                    global::System.Nullable<decimal> Original_ow_c_f_price, 
+                    global::System.Nullable<decimal> Original_ow_c_r_price, 
                     int id) {
-            if ((create_at.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(create_at.Value));
+            if ((fligth_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(fligth_id.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((flight_number == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            if ((rt_a_f_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(rt_a_f_price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(flight_number));
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(departure));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(arrival));
-            if ((route_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(route_id.Value));
+            if ((rt_a_r_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(rt_a_r_price.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((rt_c_f_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(rt_c_f_price.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((rt_c_r_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(rt_c_r_price.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((aircraft_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(aircraft_id.Value));
+            if ((ow_a_f_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(ow_a_f_price.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((regular_seats.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(regular_seats.Value));
+            if ((ow_a_r_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(ow_a_r_price.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((frist_class_seats.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(frist_class_seats.Value));
+            if ((ow_c_f_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(ow_c_f_price.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((total_regular_seats.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(total_regular_seats.Value));
+            if ((ow_c_r_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(ow_c_r_price.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((total_frist_class_seats.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(total_frist_class_seats.Value));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_id));
+            if ((Original_fligth_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_fligth_id.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id));
-            if ((Original_create_at.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_create_at.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_flight_number == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            if ((Original_rt_a_f_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_rt_a_f_price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_flight_number));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_departure));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_arrival));
-            if ((Original_route_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_route_id.Value));
+            if ((Original_rt_a_r_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_rt_a_r_price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((Original_aircraft_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_aircraft_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((Original_regular_seats.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_regular_seats.Value));
+            if ((Original_rt_c_f_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(Original_rt_c_f_price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((Original_frist_class_seats.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_frist_class_seats.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            if ((Original_total_regular_seats.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_total_regular_seats.Value));
+            if ((Original_rt_c_r_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((decimal)(Original_rt_c_r_price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            if ((Original_total_frist_class_seats.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_total_frist_class_seats.Value));
+            if ((Original_ow_a_f_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((decimal)(Original_ow_a_f_price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(id));
+            if ((Original_ow_a_r_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((decimal)(Original_ow_a_r_price.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ow_c_f_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(Original_ow_c_f_price.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ow_c_r_price.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((decimal)(Original_ow_c_r_price.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1655,28 +1596,26 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    global::System.Nullable<global::System.DateTime> create_at, 
-                    string flight_number, 
-                    System.DateTime departure, 
-                    System.DateTime arrival, 
-                    global::System.Nullable<int> route_id, 
-                    global::System.Nullable<int> aircraft_id, 
-                    global::System.Nullable<int> regular_seats, 
-                    global::System.Nullable<int> frist_class_seats, 
-                    global::System.Nullable<int> total_regular_seats, 
-                    global::System.Nullable<int> total_frist_class_seats, 
+                    global::System.Nullable<int> fligth_id, 
+                    global::System.Nullable<decimal> rt_a_f_price, 
+                    global::System.Nullable<decimal> rt_a_r_price, 
+                    global::System.Nullable<decimal> rt_c_f_price, 
+                    global::System.Nullable<decimal> rt_c_r_price, 
+                    global::System.Nullable<decimal> ow_a_f_price, 
+                    global::System.Nullable<decimal> ow_a_r_price, 
+                    global::System.Nullable<decimal> ow_c_f_price, 
+                    global::System.Nullable<decimal> ow_c_r_price, 
                     int Original_id, 
-                    global::System.Nullable<global::System.DateTime> Original_create_at, 
-                    string Original_flight_number, 
-                    System.DateTime Original_departure, 
-                    System.DateTime Original_arrival, 
-                    global::System.Nullable<int> Original_route_id, 
-                    global::System.Nullable<int> Original_aircraft_id, 
-                    global::System.Nullable<int> Original_regular_seats, 
-                    global::System.Nullable<int> Original_frist_class_seats, 
-                    global::System.Nullable<int> Original_total_regular_seats, 
-                    global::System.Nullable<int> Original_total_frist_class_seats) {
-            return this.Update(create_at, flight_number, departure, arrival, route_id, aircraft_id, regular_seats, frist_class_seats, total_regular_seats, total_frist_class_seats, Original_id, Original_create_at, Original_flight_number, Original_departure, Original_arrival, Original_route_id, Original_aircraft_id, Original_regular_seats, Original_frist_class_seats, Original_total_regular_seats, Original_total_frist_class_seats, Original_id);
+                    global::System.Nullable<int> Original_fligth_id, 
+                    global::System.Nullable<decimal> Original_rt_a_f_price, 
+                    global::System.Nullable<decimal> Original_rt_a_r_price, 
+                    global::System.Nullable<decimal> Original_rt_c_f_price, 
+                    global::System.Nullable<decimal> Original_rt_c_r_price, 
+                    global::System.Nullable<decimal> Original_ow_a_f_price, 
+                    global::System.Nullable<decimal> Original_ow_a_r_price, 
+                    global::System.Nullable<decimal> Original_ow_c_f_price, 
+                    global::System.Nullable<decimal> Original_ow_c_r_price) {
+            return this.Update(fligth_id, rt_a_f_price, rt_a_r_price, rt_c_f_price, rt_c_r_price, ow_a_f_price, ow_a_r_price, ow_c_f_price, ow_c_r_price, Original_id, Original_fligth_id, Original_rt_a_f_price, Original_rt_a_r_price, Original_rt_c_f_price, Original_rt_c_r_price, Original_ow_a_f_price, Original_ow_a_r_price, Original_ow_c_f_price, Original_ow_c_r_price, Original_id);
         }
     }
     
@@ -1692,7 +1631,7 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         
         private UpdateOrderOption _updateOrder;
         
-        private flightsTableAdapter _flightsTableAdapter;
+        private pricesTableAdapter _pricesTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1714,12 +1653,12 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public flightsTableAdapter flightsTableAdapter {
+        public pricesTableAdapter pricesTableAdapter {
             get {
-                return this._flightsTableAdapter;
+                return this._pricesTableAdapter;
             }
             set {
-                this._flightsTableAdapter = value;
+                this._pricesTableAdapter = value;
             }
         }
         
@@ -1742,9 +1681,9 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._flightsTableAdapter != null) 
-                            && (this._flightsTableAdapter.Connection != null))) {
-                    return this._flightsTableAdapter.Connection;
+                if (((this._pricesTableAdapter != null) 
+                            && (this._pricesTableAdapter.Connection != null))) {
+                    return this._pricesTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1759,7 +1698,7 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._flightsTableAdapter != null)) {
+                if ((this._pricesTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1771,14 +1710,14 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(FligthDataContext dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(PricesDataContext dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._flightsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.flights.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._pricesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.prices.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._flightsTableAdapter.Update(updatedRows));
+                    result = (result + this._pricesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1790,13 +1729,13 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(FligthDataContext dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(PricesDataContext dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._flightsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.flights.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._pricesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.prices.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._flightsTableAdapter.Update(addedRows));
+                    result = (result + this._pricesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1808,13 +1747,13 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(FligthDataContext dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(PricesDataContext dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._flightsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.flights.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pricesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.prices.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._flightsTableAdapter.Update(deletedRows));
+                    result = (result + this._pricesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1850,15 +1789,15 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(FligthDataContext dataSet) {
+        public virtual int UpdateAll(PricesDataContext dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._flightsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._flightsTableAdapter.Connection) == false))) {
+            if (((this._pricesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._pricesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1894,13 +1833,13 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._flightsTableAdapter != null)) {
-                    revertConnections.Add(this._flightsTableAdapter, this._flightsTableAdapter.Connection);
-                    this._flightsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._flightsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._flightsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._flightsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._flightsTableAdapter.Adapter);
+                if ((this._pricesTableAdapter != null)) {
+                    revertConnections.Add(this._pricesTableAdapter, this._pricesTableAdapter.Connection);
+                    this._pricesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._pricesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._pricesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._pricesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._pricesTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1961,9 +1900,9 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._flightsTableAdapter != null)) {
-                    this._flightsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._flightsTableAdapter]));
-                    this._flightsTableAdapter.Transaction = null;
+                if ((this._pricesTableAdapter != null)) {
+                    this._pricesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pricesTableAdapter]));
+                    this._pricesTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

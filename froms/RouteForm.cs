@@ -38,8 +38,15 @@ namespace AirLine.froms
 
         private void SaveRoute_Click(object sender, EventArgs e)
         {
-
-            this.routesTableAdapter.Update(this.routeDataContext.routes);
+            try 
+            {
+                this.routesTableAdapter.Update(this.routeDataContext.routes);
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("The Route could not be saved because the combination of Destination Airport and Arrival Airport already  exists.");
+            }
+            
         }
 
         private void CancelEdit_Click(object sender, EventArgs e)

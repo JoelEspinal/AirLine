@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FligthForm));
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.AddNew = new System.Windows.Forms.ToolStripButton();
-            this.flightsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fligthDataContext = new AirLine.FligthDataContext();
             this.CountItem = new System.Windows.Forms.ToolStripLabel();
             this.Delete = new System.Windows.Forms.ToolStripButton();
             this.MoveFirst = new System.Windows.Forms.ToolStripButton();
@@ -47,33 +45,34 @@
             this.Save = new System.Windows.Forms.ToolStripButton();
             this.Cancel = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.arrivalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pricesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surchargeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.routeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.routesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.routeDataContext = new AirLine.RouteDataContext();
-            this.aircraftidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.aircraftsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aircraftDataContext = new AirLine.AircraftDataContext();
+            this.routesTableAdapter = new AirLine.RouteDataContextTableAdapters.routesTableAdapter();
+            this.aircraftsTableAdapter = new AirLine.AircraftDataContextTableAdapters.aircraftsTableAdapter();
+            this.flightsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fligthDataContext = new AirLine.FligthDataContext();
+            this.flightsTableAdapter = new AirLine.FligthDataContextTableAdapters.flightsTableAdapter();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flight_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.arrivalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.routeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.aircraftidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.regularseatsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fristclassseatsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalregularseatsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalfristclassseatsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flightsTableAdapter = new AirLine.FligthDataContextTableAdapters.flightsTableAdapter();
-            this.routesTableAdapter = new AirLine.RouteDataContextTableAdapters.routesTableAdapter();
-            this.aircraftsTableAdapter = new AirLine.AircraftDataContextTableAdapters.aircraftsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fligthDataContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.routesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.routeDataContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aircraftsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aircraftDataContext)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fligthDataContext)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator
@@ -117,16 +116,6 @@
             this.AddNew.Size = new System.Drawing.Size(23, 22);
             this.AddNew.Text = "Add new";
             this.AddNew.Click += new System.EventHandler(this.AddNew_Click);
-            // 
-            // flightsBindingSource
-            // 
-            this.flightsBindingSource.DataMember = "flights";
-            this.flightsBindingSource.DataSource = this.fligthDataContext;
-            // 
-            // fligthDataContext
-            // 
-            this.fligthDataContext.DataSetName = "FligthDataContext";
-            this.fligthDataContext.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CountItem
             // 
@@ -232,10 +221,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.flight_number,
             this.departureDataGridViewTextBoxColumn,
             this.arrivalDataGridViewTextBoxColumn,
-            this.pricesDataGridViewTextBoxColumn,
-            this.surchargeDataGridViewTextBoxColumn,
             this.routeidDataGridViewTextBoxColumn,
             this.aircraftidDataGridViewTextBoxColumn,
             this.regularseatsDataGridViewTextBoxColumn,
@@ -248,6 +236,48 @@
             this.dataGridView1.Size = new System.Drawing.Size(802, 391);
             this.dataGridView1.TabIndex = 1;
             // 
+            // routesBindingSource
+            // 
+            this.routesBindingSource.DataMember = "routes";
+            this.routesBindingSource.DataSource = this.routeDataContext;
+            // 
+            // routeDataContext
+            // 
+            this.routeDataContext.DataSetName = "RouteDataContext";
+            this.routeDataContext.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aircraftsBindingSource
+            // 
+            this.aircraftsBindingSource.DataMember = "aircrafts";
+            this.aircraftsBindingSource.DataSource = this.aircraftDataContext;
+            // 
+            // aircraftDataContext
+            // 
+            this.aircraftDataContext.DataSetName = "AircraftDataContext";
+            this.aircraftDataContext.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // routesTableAdapter
+            // 
+            this.routesTableAdapter.ClearBeforeFill = true;
+            // 
+            // aircraftsTableAdapter
+            // 
+            this.aircraftsTableAdapter.ClearBeforeFill = true;
+            // 
+            // flightsBindingSource
+            // 
+            this.flightsBindingSource.DataMember = "flights";
+            this.flightsBindingSource.DataSource = this.fligthDataContext;
+            // 
+            // fligthDataContext
+            // 
+            this.fligthDataContext.DataSetName = "FligthDataContext";
+            this.fligthDataContext.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flightsTableAdapter
+            // 
+            this.flightsTableAdapter.ClearBeforeFill = true;
+            // 
             // id
             // 
             this.id.DataPropertyName = "id";
@@ -255,6 +285,12 @@
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Width = 30;
+            // 
+            // flight_number
+            // 
+            this.flight_number.DataPropertyName = "flight_number";
+            this.flight_number.HeaderText = "Flight Number";
+            this.flight_number.Name = "flight_number";
             // 
             // departureDataGridViewTextBoxColumn
             // 
@@ -271,19 +307,6 @@
             this.arrivalDataGridViewTextBoxColumn.HeaderText = "Arrival Time";
             this.arrivalDataGridViewTextBoxColumn.Name = "arrivalDataGridViewTextBoxColumn";
             // 
-            // pricesDataGridViewTextBoxColumn
-            // 
-            this.pricesDataGridViewTextBoxColumn.DataPropertyName = "prices";
-            this.pricesDataGridViewTextBoxColumn.HeaderText = "Prices";
-            this.pricesDataGridViewTextBoxColumn.Name = "pricesDataGridViewTextBoxColumn";
-            this.pricesDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // surchargeDataGridViewTextBoxColumn
-            // 
-            this.surchargeDataGridViewTextBoxColumn.DataPropertyName = "surcharge";
-            this.surchargeDataGridViewTextBoxColumn.HeaderText = "Surcharge";
-            this.surchargeDataGridViewTextBoxColumn.Name = "surchargeDataGridViewTextBoxColumn";
-            // 
             // routeidDataGridViewTextBoxColumn
             // 
             this.routeidDataGridViewTextBoxColumn.DataPropertyName = "route_id";
@@ -295,18 +318,9 @@
             this.routeidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.routeidDataGridViewTextBoxColumn.ValueMember = "id";
             // 
-            // routesBindingSource
-            // 
-            this.routesBindingSource.DataMember = "routes";
-            this.routesBindingSource.DataSource = this.routeDataContext;
-            // 
-            // routeDataContext
-            // 
-            this.routeDataContext.DataSetName = "RouteDataContext";
-            this.routeDataContext.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // aircraftidDataGridViewTextBoxColumn
             // 
+            this.aircraftidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.aircraftidDataGridViewTextBoxColumn.DataPropertyName = "aircraft_id";
             this.aircraftidDataGridViewTextBoxColumn.DataSource = this.aircraftsBindingSource;
             this.aircraftidDataGridViewTextBoxColumn.DisplayMember = "code";
@@ -315,57 +329,36 @@
             this.aircraftidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.aircraftidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.aircraftidDataGridViewTextBoxColumn.ValueMember = "id";
-            this.aircraftidDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // aircraftsBindingSource
-            // 
-            this.aircraftsBindingSource.DataMember = "aircrafts";
-            this.aircraftsBindingSource.DataSource = this.aircraftDataContext;
-            // 
-            // aircraftDataContext
-            // 
-            this.aircraftDataContext.DataSetName = "AircraftDataContext";
-            this.aircraftDataContext.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // regularseatsDataGridViewTextBoxColumn
             // 
-            this.regularseatsDataGridViewTextBoxColumn.DataPropertyName = "regular_seats";
+            this.regularseatsDataGridViewTextBoxColumn.DataPropertyName = "total_regular_seats";
             this.regularseatsDataGridViewTextBoxColumn.HeaderText = "Regular Seats";
             this.regularseatsDataGridViewTextBoxColumn.Name = "regularseatsDataGridViewTextBoxColumn";
-            this.regularseatsDataGridViewTextBoxColumn.Width = 50;
+            this.regularseatsDataGridViewTextBoxColumn.Visible = false;
+            this.regularseatsDataGridViewTextBoxColumn.Width = 90;
             // 
             // fristclassseatsDataGridViewTextBoxColumn
             // 
-            this.fristclassseatsDataGridViewTextBoxColumn.DataPropertyName = "frist_class_seats";
+            this.fristclassseatsDataGridViewTextBoxColumn.DataPropertyName = "total_frist_class_seats";
             this.fristclassseatsDataGridViewTextBoxColumn.HeaderText = "Frist Class Seats";
             this.fristclassseatsDataGridViewTextBoxColumn.Name = "fristclassseatsDataGridViewTextBoxColumn";
-            this.fristclassseatsDataGridViewTextBoxColumn.Width = 50;
+            this.fristclassseatsDataGridViewTextBoxColumn.Visible = false;
+            this.fristclassseatsDataGridViewTextBoxColumn.Width = 90;
             // 
             // totalregularseatsDataGridViewTextBoxColumn
             // 
             this.totalregularseatsDataGridViewTextBoxColumn.DataPropertyName = "total_regular_seats";
-            this.totalregularseatsDataGridViewTextBoxColumn.HeaderText = "Total Regular Seats";
+            this.totalregularseatsDataGridViewTextBoxColumn.HeaderText = "Regular Seats";
             this.totalregularseatsDataGridViewTextBoxColumn.Name = "totalregularseatsDataGridViewTextBoxColumn";
-            this.totalregularseatsDataGridViewTextBoxColumn.Width = 50;
+            this.totalregularseatsDataGridViewTextBoxColumn.Width = 90;
             // 
             // totalfristclassseatsDataGridViewTextBoxColumn
             // 
             this.totalfristclassseatsDataGridViewTextBoxColumn.DataPropertyName = "total_frist_class_seats";
-            this.totalfristclassseatsDataGridViewTextBoxColumn.HeaderText = "Total Frist Class Seats";
+            this.totalfristclassseatsDataGridViewTextBoxColumn.HeaderText = "Frist Class Seats";
             this.totalfristclassseatsDataGridViewTextBoxColumn.Name = "totalfristclassseatsDataGridViewTextBoxColumn";
-            this.totalfristclassseatsDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // flightsTableAdapter
-            // 
-            this.flightsTableAdapter.ClearBeforeFill = true;
-            // 
-            // routesTableAdapter
-            // 
-            this.routesTableAdapter.ClearBeforeFill = true;
-            // 
-            // aircraftsTableAdapter
-            // 
-            this.aircraftsTableAdapter.ClearBeforeFill = true;
+            this.totalfristclassseatsDataGridViewTextBoxColumn.Width = 90;
             // 
             // FligthForm
             // 
@@ -380,13 +373,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).EndInit();
             this.bindingNavigator.ResumeLayout(false);
             this.bindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fligthDataContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.routesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.routeDataContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aircraftsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aircraftDataContext)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fligthDataContext)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,10 +412,9 @@
         private System.Windows.Forms.ToolStripButton Save;
         private System.Windows.Forms.ToolStripButton Cancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn flight_number;
         private System.Windows.Forms.DataGridViewTextBoxColumn departureDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn arrivalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pricesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surchargeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn routeidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn aircraftidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn regularseatsDataGridViewTextBoxColumn;
