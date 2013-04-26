@@ -469,7 +469,7 @@ namespace AirLine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public flightsRow AddflightsRow(System.DateTime create_at, System.DateTime departure, System.DateTime arrival, int route_id, int aircraft_id, int regular_seats, int frist_class_seats, int total_regular_seats, int total_frist_class_seats, string flight_number, System.DateTime flight_name) {
+            public flightsRow AddflightsRow(System.DateTime create_at, System.DateTime departure, System.DateTime arrival, int route_id, int aircraft_id, int regular_seats, int frist_class_seats, int total_regular_seats, int total_frist_class_seats, string flight_number, string flight_name) {
                 flightsRow rowflightsRow = ((flightsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -552,7 +552,7 @@ namespace AirLine {
                 base.Columns.Add(this.columntotal_frist_class_seats);
                 this.columnflight_number = new global::System.Data.DataColumn("flight_number", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnflight_number);
-                this.columnflight_name = new global::System.Data.DataColumn("flight_name", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnflight_name = new global::System.Data.DataColumn("flight_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnflight_name);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
@@ -566,6 +566,7 @@ namespace AirLine {
                 this.columnarrival.AllowDBNull = false;
                 this.columnflight_number.MaxLength = 6;
                 this.columnflight_name.ReadOnly = true;
+                this.columnflight_name.MaxLength = 42;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -869,10 +870,10 @@ namespace AirLine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime flight_name {
+            public string flight_name {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableflights.flight_nameColumn]));
+                        return ((string)(this[this.tableflights.flight_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'flight_name\' in table \'flights\' is DBNull.", e);
@@ -1190,7 +1191,7 @@ namespace AirLine.FligthDataContextTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [flights] ([create_at], [flight_number], [departure], [arrival], [route_id], [aircraft_id], [regular_seats], [frist_class_seats], [total_regular_seats], [total_frist_class_seats]) VALUES (@create_at, @flight_number, @departure, @arrival, @route_id, @aircraft_id, @regular_seats, @frist_class_seats, @total_regular_seats, @total_frist_class_seats);
-SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure AS flight_name, arrival, route_id, aircraft_id, regular_seats, frist_class_seats, total_regular_seats, total_frist_class_seats FROM flights WHERE (id = SCOPE_IDENTITY())";
+SELECT id, create_at, flight_number, departure, flight_number + ' ' + CAST(MONTH(departure) AS varchar(11)) + '/' + CAST(DAY(departure) AS varchar(11)) + '/' + CAST(YEAR(departure) AS varchar(11)) AS flight_name, arrival, route_id, aircraft_id, regular_seats, frist_class_seats, total_regular_seats, total_frist_class_seats FROM flights WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@create_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "create_at", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flight_number", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1222,9 +1223,10 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
                 "otal_regular_seats)) AND ((@IsNull_total_frist_class_seats = 1 AND [total_frist_" +
                 "class_seats] IS NULL) OR ([total_frist_class_seats] = @Original_total_frist_clas" +
                 "s_seats)));\r\nSELECT id, create_at, flight_number, departure, flight_number + \' \'" +
-                " + departure AS flight_name, arrival, route_id, aircraft_id, regular_seats, fris" +
-                "t_class_seats, total_regular_seats, total_frist_class_seats FROM flights WHERE (" +
-                "id = @id)";
+                " + CAST(MONTH(departure) AS varchar(11)) + \'/\' + CAST(DAY(departure) AS varchar(" +
+                "11)) + \'/\' + CAST(YEAR(departure) AS varchar(11)) AS flight_name, arrival, route" +
+                "_id, aircraft_id, regular_seats, frist_class_seats, total_regular_seats, total_f" +
+                "rist_class_seats FROM flights WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@create_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "create_at", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flight_number", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1271,9 +1273,10 @@ SELECT id, create_at, flight_number, departure, flight_number + ' ' + departure 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, create_at, flight_number, departure, flight_number + \' \' + departure A" +
-                "S flight_name, arrival, route_id, aircraft_id, regular_seats, frist_class_seats," +
-                " total_regular_seats, total_frist_class_seats FROM flights";
+            this._commandCollection[0].CommandText = @"SELECT        id, create_at, flight_number, departure, flight_number + ' ' + CAST(MONTH(departure) AS varchar(11)) + '/' + CAST(DAY(departure) AS varchar(11)) 
+                         + '/' + CAST(YEAR(departure) AS varchar(11)) AS flight_name, arrival, route_id, aircraft_id, regular_seats, frist_class_seats, total_regular_seats, 
+                         total_frist_class_seats
+FROM            flights";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

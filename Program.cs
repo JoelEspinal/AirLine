@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AirLine.froms;
+using System.Data;
 
 namespace AirLine
 {
@@ -15,10 +16,18 @@ namespace AirLine
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new airLineConteiner());
-            //this.airportsTableAdapter.Fill(this.airportDataSet.airports);
+            //try
+            //{
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new airLineConteiner());
+                //this.airportsTableAdapter.Fill(this.airportDataSet.airports);
+           // }   
+            //catch (NoNullAllowedException)
+            //{
+
+              //  MessageBox.Show("have to save before adding another");
+            //}   
         }
     }
 }

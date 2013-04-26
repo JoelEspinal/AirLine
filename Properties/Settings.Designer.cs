@@ -32,5 +32,15 @@ namespace AirLine.Properties {
                 return ((string)(this["AirlineConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:51950/Service.asmx")]
+        public string AirLine_localhost_Service {
+            get {
+                return ((string)(this["AirLine_localhost_Service"]));
+            }
+        }
     }
 }

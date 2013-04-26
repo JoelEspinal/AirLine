@@ -79,9 +79,10 @@ namespace AirLine.localhost {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string[] GetData(string[] dates, int departure_airport_id, int destination_airport_id, int passengers, bool regular) {
+        public string[] GetData(string departure_date_str, string return_date_str, int departure_airport_id, int destination_airport_id, int passengers, bool regular) {
             object[] results = this.Invoke("GetData", new object[] {
-                        dates,
+                        departure_date_str,
+                        return_date_str,
                         departure_airport_id,
                         destination_airport_id,
                         passengers,
@@ -90,17 +91,18 @@ namespace AirLine.localhost {
         }
         
         /// <remarks/>
-        public void GetDataAsync(string[] dates, int departure_airport_id, int destination_airport_id, int passengers, bool regular) {
-            this.GetDataAsync(dates, departure_airport_id, destination_airport_id, passengers, regular, null);
+        public void GetDataAsync(string departure_date_str, string return_date_str, int departure_airport_id, int destination_airport_id, int passengers, bool regular) {
+            this.GetDataAsync(departure_date_str, return_date_str, departure_airport_id, destination_airport_id, passengers, regular, null);
         }
         
         /// <remarks/>
-        public void GetDataAsync(string[] dates, int departure_airport_id, int destination_airport_id, int passengers, bool regular, object userState) {
+        public void GetDataAsync(string departure_date_str, string return_date_str, int departure_airport_id, int destination_airport_id, int passengers, bool regular, object userState) {
             if ((this.GetDataOperationCompleted == null)) {
                 this.GetDataOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDataOperationCompleted);
             }
             this.InvokeAsync("GetData", new object[] {
-                        dates,
+                        departure_date_str,
+                        return_date_str,
                         departure_airport_id,
                         destination_airport_id,
                         passengers,
